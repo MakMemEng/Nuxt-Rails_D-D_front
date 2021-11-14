@@ -13,5 +13,12 @@ ENV HOME=/${WORKDIR} \
 
 WORKDIR ${HOME}
 
+COPY package*.json ./
+RUN yarn install
+
+COPY . ./
+
+RUN yarn run build
+
 # http://localhost(0.0.0.0):3000
 # EXPOSE ${CONTAINER_PORT}
