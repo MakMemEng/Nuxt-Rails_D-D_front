@@ -1,6 +1,11 @@
 export default {
+  mode: 'spa',
+
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+
+  // Doc: https://ja.nuxtjs.org/blog/going-full-static/
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -42,6 +47,10 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
   ],
+
+  // public ENV
+  // Doc: https://nuxtjs.org/guide/runtime-config/
+  publicRuntimeConfig: {},
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
