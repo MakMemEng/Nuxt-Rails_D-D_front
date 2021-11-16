@@ -42,11 +42,11 @@ export default {
       .then(res => (users = res))
     return { users }
   },
+  // 算出プロパティ => 計算したデータを返す関数
   computed: {
-    // 算出プロパティ => 計算したデータを返す関数
     dateFormat () {
       // date => "2021-03-01T19:15:38.615+09:00"
-      // return => "2021/03/01"
+      // return '2021/03/01'
       return (date) => {
         const dateTimeFormat = new Intl.DateTimeFormat(
           'ja', { dateStyle: 'medium', timeStyle: 'short' }
