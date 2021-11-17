@@ -1,12 +1,33 @@
 <template>
-  <div>
-    signup.vue
-    <nuxt />
-  </div>
+  <user-form-card
+    #user-form-card-content
+  >
+    <v-form
+      v-model="isValid"
+    >
+      <user-form-name />
+      <user-form-email />
+      <user-form-password />
+      <!-- disabled=true => ボタンクリックを無効にする -->
+      <v-btn
+        :disabled="!isValid"
+        block
+        color="appblue"
+        class="white--text"
+      >
+        登録する
+      </v-btn>
+    </v-form>
+  </user-form-card>
 </template>
 
 <script>
 export default {
-  layout: 'before-login'
+  layout: 'before-login',
+  data () {
+    return {
+      isValid: false
+    }
+  }
 }
 </script>
