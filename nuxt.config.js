@@ -55,7 +55,9 @@ export default {
 
   // public ENV
   // Doc: https://nuxtjs.org/guide/runtime-config/
-  publicRuntimeConfig: {},
+  publicRuntimeConfig: {
+    appName: process.env.APP_NAME
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
