@@ -45,7 +45,6 @@
           v-for="(menu, i) in menus"
           :key="`menu-${i}`"
         >
-
           <v-col
             :id="menu.title"
             cols="12"
